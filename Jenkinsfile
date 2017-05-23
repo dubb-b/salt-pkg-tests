@@ -8,24 +8,17 @@ pipeline {
   stages {
     stage('CentOS6') {
       steps {
-        sh 'hostname -I'
-        echo 'Getting Env Vars'
-        echo 'Running Package Tests'
+        echo 'Getting ENV Vars'
       }
     }
-    stage('CentOS7') {
+    stage('CentOS6 Run Tests') {
       steps {
-        sh 'hostname -I'
+        echo 'Running Tests'
       }
     }
-    stage('Ubuntu 14.04') {
+    stage('CentOS6 Return Results') {
       steps {
-        sh 'hostname -I'
-      }
-    }
-    stage('Ubuntu 16.04') {
-      steps {
-        sh 'hostname -I'
+        echo 'returning results'
       }
     }
   }
