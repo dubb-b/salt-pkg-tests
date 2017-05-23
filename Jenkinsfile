@@ -86,5 +86,3 @@ def notifyFailed(String stageName) {
 def notifyInformation(String stageName) {
  slackSend(color: '#0000FF', message: "This is some random information about the build...." + "\n  Stage -- " + stageName)
 }
-
-
